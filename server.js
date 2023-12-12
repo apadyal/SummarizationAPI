@@ -86,27 +86,30 @@ async function ExtractText(text, summarySentenceCount) {
 }
 
 /**
-  * @swagger
-  * /summarize:
-  *   post:
-  *     tags:
-  *       - Summary
-  *     summary: Summarize the provided text snippet
-  *     description: Summarize the provided text snippet
-  *     requestBody:
-  *       description: The text to summarize.
-  *       content:
-  *         application/json:
-  *           schema:
-  *             $ref: '#/components/schemas/Book'
-  *     responses:
-  *       "200":
-  *         description: Successful operation
-  *         content:
-  *           application/json:
-  *             schema:
-  *         status: string
-  *         summary: string
+ * @swagger
+ * /summarize:
+ *    post:
+ *      description: A wrapper API for extracting summary out of lengthy text.
+ *      consumes:
+ *          - application/json
+ *      parameters:
+ *          - in: body
+ *            name: Input
+ *            description: The JSON for summarization.
+ *            schema:
+ *              type: object
+ *              required:
+ *                - text
+ *              properties:
+ *                text:
+ *                  type: string
+ *                sentenceCount:
+ *                  type: integer
+ *      produces:
+ *          - application/json
+ *      responses:
+ *          200:
+ *              description: Summarized text
  */
 app.post('/summarize', async(req, res) => {
     var text = req.body.text;
