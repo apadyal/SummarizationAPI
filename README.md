@@ -3,23 +3,23 @@ We have Swagger Documentation on the below link
 http://140.82.12.45:3000/docs/
 
 ## Instructions for sending a request to SummarizationAPI using Postman
-1.	Download Postman. Go to https://www.postman.com/downloads/ and choose your desired platform among Mac, Windows, or Linux. #   by using the link https://www.postman.com/downloads/ 
-  a.	Open the downloaded file and click on run, it will start the Installation on your system
-  b.	You can sign up or else it works without signing up. It is a free tool used for testing HTTP methods.
-  c.	Now you have successfully installed Postman.
-2.	Create new request on Postman using following steps
-   a. Open Postman and create 'New Request'
-   b. Select POST from the request dropdown.
-   c. Enter the API URL in the address box
-   d. For building the request body, click on 'raw' and select 'JSON' from the dropdown.
-   e. Enter the message into the request body. NOTE:  add newline charecter '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention.
-  	The request JSON format is as follows -
+1.	Download Postman. Go to https://www.postman.com/downloads/ and choose your desired platform among Mac, Windows, or Linux. #   by using the link https://www.postman.com/downloads/ <br />
+  a.	Open the downloaded file and click on run, it will start the Installation on your system <br />
+  b.	You can sign up or else it works without signing up. It is a free tool used for testing HTTP methods. <br />
+  c.	Now you have successfully installed Postman. <br />
+2.	Create new request on Postman using following steps <br />
+   a. Open Postman and create 'New Request' <br />
+   b. Select POST from the request dropdown. <br />
+   c. Enter the API URL in the address box <br />
+   d. For building the request body, click on 'raw' and select 'JSON' from the dropdown. <br />
+   e. Enter the message into the request body. NOTE:  add newline charecter '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention. <br />
+  	The request JSON format is as follows - <br />
 
-     {
-        “text”: “<Your lengthy paragraph here>”,
-        “sentenceCount”: 3 <Number of sentence in the summary>
-     }
-   f. Hit 'SEND'.
+     { <br />
+        “text”: “< Your lengthy paragraph here >”, <br />
+        “sentenceCount”: 3 <Number of sentence in the summary> <br />
+     } <br />
+   f. Hit 'SEND'. <br />
     
 API Operation Template to use- 
 Sr. No.	HTTP Method	Uniform API	Description	Example Payload
@@ -40,12 +40,13 @@ Express is a minimal and flexible Node.js web application framework that provide
 Implementation Flow
  
 Figure 1 working of summarization AI
-We are implementing the API by using the HTTP POST method to get the input from a testing tool POSTMAN and present the prepared requested payload in a summarized sentence to the user. We have followed the steps to implement the Summarization API-
-1.	The user will send a request using POSTMAN.
-2.	The user’s request will be sent to our API.
-3.	Our API will get the user’s request and send it to the Azure Summarization API, the Azure Summarization API will fulfill the request by generating the response as per the requested payload.
-4.	The generated response by Azure Summarization API will be sent to our API.
-5.	Our API will send the response payload as an output to the user's request.
+We are implementing the API by using the HTTP POST method to get the input from a testing tool POSTMAN and present the prepared requested payload in a summarized sentence to the user. We have followed the steps to implement the Summarization API- <br />
+1.	The user will send a request using POSTMAN.<br />
+2.	The user’s request will be sent to our API.<br />
+3.	Our API will get the user’s request and send it to the Azure Summarization API, the Azure Summarization API will fulfill the request by generating the response as per the requested payload.<br />
+4.	The generated response by Azure Summarization API will be sent to our API.<br />
+5.	Our API will send the response payload as an output to the user's request.<br />
+
 While implementing the above steps we have made sure that the user will need not to go and register or configure for the Azure Summarization API, the user can directly go and use/consume Our API to communicate with Azure Summarization.
 
 ### Instructions to follow for using our API
