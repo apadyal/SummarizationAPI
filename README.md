@@ -1,6 +1,6 @@
 ﻿# SummarizationAPI
 We have Swagger Documentation on the below link
-https://140.82.12.45:3000/docs/
+http://140.82.12.45:3000/docs/
 
 ## Instructions for sending a request to SummarizationAPI using Postman
 1.	Download Postman. Go to https://www.postman.com/downloads/ and choose your desired platform among Mac, Windows, or Linux. #   by using the link https://www.postman.com/downloads/ 
@@ -35,7 +35,7 @@ We are implementing the API by using the HTTP POST method to get the input from 
 5.	Our API will send the response payload as an output to the user's request.
 While implementing the above steps we have made sure that the user will need not to go and register or configure for the Azure Summarization API, the user can directly go and use/consume Our API to communicate with Azure Summarization.
 
-Instructions to follow for using our API
+### Instructions to follow for using our API
 1.	Download Postman. Go to https://www.postman.com/downloads/ and choose your desired platform among Mac, Windows, or Linux. #   by using the link https://www.postman.com/downloads/ 
 a.	Open the downloaded file and click on run, it will start the Installation on your system
 b.	You can sign up or else it works without signing up. It is a free tool used for testing HTTP methods.
