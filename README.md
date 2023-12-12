@@ -23,10 +23,10 @@ http://140.82.12.45:3000/docs/
 	      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244976)
 	  	The request JSON format is as follows - <br />
 	
-	     { <br />
+	     { 
 	        “text”: “< Your lengthy paragraph here >”, <br />
 	        “sentenceCount”: 3 <Number of sentence in the summary> <br />
-	     } <br />
+	     } 
 
     
    f. Hit 'SEND'. <br />
