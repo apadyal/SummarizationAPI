@@ -8,9 +8,22 @@ http://140.82.12.45:3000/docs/
   b.	You can sign up or else it works without signing up. It is a free tool used for testing HTTP methods.
   c.	Now you have successfully installed Postman.
 2.	Create new request on Postman using following steps
+   a. Open Postman and create 'New Request'
+   b. Select POST from the request dropdown.
+   c. Enter the API URL in the address box
+   d. For building the request body, click on 'raw' and select 'JSON' from the dropdown.
+   e. Enter the message into the request body. NOTE:  add newline charecter '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention.
+  	The request JSON format is as follows -
+
+     {
+        “text”: “<Your lengthy paragraph here>”,
+        “sentenceCount”: 3 <Number of sentence in the summary>
+     }
+   f. Hit 'SEND'.
+    
 API Operation Template to use- 
 Sr. No.	HTTP Method	Uniform API	Description	Example Payload
-1	POST	POST resource	POST method must be used to input the text to summarize it	POST:/api/translate
+1	POST	POST resource	POST method must be used to input the text to summarize it	POST:/api/summarize
 {
 “text”: “string”,
 “sentenceCount”: “string”
