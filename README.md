@@ -10,17 +10,17 @@ http://140.82.12.45:3000/docs/
 2.	Create a new request on Postman using the following steps <br />
 	   a. Open Postman and create 'New Request' <br />
 	   b. Select POST from the request dropdown. <br />
-	     ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851245410)
-	
-	  	
-	   c. Enter the API URL in the address box <br />
-	      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851243937)
-	
+    		![s1](https://github.com/apadyal/SummarizationAPI/assets/143288671/6caeaca2-44e0-4365-87ac-4feee0c3850e)
+
+	   c. Enter the API URL in the address box as 'http://140.82.12.45:3000/summarize'<br />
+		![s2](https://github.com/apadyal/SummarizationAPI/assets/143288671/7d0de4ac-362c-4cb6-a023-3b1fd391d8a1)
+
 	   d. For building the request body, click on 'raw' and select 'JSON' from the dropdown. <br />
-	       ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244271)
-	
-	   e. Enter the message into the request body. NOTE:  add newline character '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention. <br />
-	      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244976)
+    		![image](https://github.com/apadyal/SummarizationAPI/assets/143288671/0c62402a-81c8-450a-9096-4277f4b6f90e)
+
+	   e. Enter the message into the request body. NOTE:  add newline character '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention. <br /> <br />
+	      ![s4](https://github.com/apadyal/SummarizationAPI/assets/143288671/e6209ed0-fd2b-46fd-aa59-3384e86df24c)
+
 	  	The request JSON format is as follows - <br />
 	
 	     { 
@@ -45,9 +45,9 @@ The Azure Summarization service is a cloud-based solution that provides extracti
 ## Technology Stack
 Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. APIs. Hence, we are using Node JS and Express as a Web framework to implement the project. 
 
-## Implementation Flow
- 
-![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851253951)
+## Implementation Flow <br />
+ ![image](https://github.com/apadyal/SummarizationAPI/assets/143288671/8e7ed3cc-033a-4ad4-b61b-d1611a70d894)
+
 
 We are implementing the API by using the HTTP POST method to get the input from a testing tool POSTMAN and present the prepared requested payload in a summarized sentence to the user. We have followed the steps to implement the Summarization API- <br />
 1.	The user will send a request using POSTMAN.<br />
@@ -56,5 +56,9 @@ We are implementing the API by using the HTTP POST method to get the input from 
 4.	The generated response by Azure Summarization API will be sent to our API.<br />
 5.	Our API will send the response payload as an output to the user's request.<br />
 
-While implementing the above steps we have made sure that the user will need not to go and register or configure for the Azure Summarization API, the user can directly go and use/consume Our API to communicate with Azure Summarization.
+While implementing the above steps we have made sure that the user will need not to go and register or configure for the Azure Summarization API, the user can directly go and use/consume Our API to communicate with Azure Summarization. <br />
+
+## Swagger doc <br />
+![swagger](https://github.com/apadyal/SummarizationAPI/assets/143288671/d5c26b5d-2f64-479b-a174-5766b51b4fa0)
+
 
