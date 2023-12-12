@@ -4,27 +4,52 @@ const app = express();
 const port = 3000;
 const { AzureKeyCredential, TextAnalysisClient } = require("@azure/ai-language-text");
 
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+const options = {
+    swaggerDefinition: {
+        info: {
+            title: 'Summarization',
+            version: '1.0.0',
+            description: 'An API to summarize the text into given number of sentences. This is an API that utilizes Azure AI Language service._'
+            
+        },
+        host: 'localhost:3000',
+        basePath: '/',
+    },
+    apis: ['./server.js'],
+    explorer: true,
+};
+
+
+const specs = swaggerJsdoc(options);
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
+
 app.use(express.json());
+
+/**
+ * @swagger
+ * tags:
+ * name: Summary
+ * description: The books managing API
+ */
 
 const endpoint = process.env.LANGUAGE_ENDPOINT;
 const apiKey = process.env.LANGUAGE_KEY;
 
-async function ExtractTextExample(text) {
+async function ExtractText(text, summarySentenceCount) {
 
-    // This example requires environment variables named "LANGUAGE_KEY" and "LANGUAGE_ENDPOINT"
-    debugger;
     // Load the .env file if it exists
     require("dotenv").config();
     const endpoint = process.env.LANGUAGE_ENDPOINT;
     const apiKey = process.env.LANGUAGE_KEY;
 
-  console.log("== Extractive Summarization Sample ==");
-
   const client = new TextAnalysisClient(endpoint, new AzureKeyCredential(apiKey));
   const actions = [
     {
       kind: "ExtractiveSummarization",
-      maxSentenceCount: 2,
+      maxSentenceCount: summarySentenceCount,
     },
   ];
   const poller = await client.beginAnalyzeBatch(actions, text, "en");
@@ -47,6 +72,7 @@ async function ExtractTextExample(text) {
       const { code, message } = actionResult.error;
       throw new Error(`Unexpected error (${code}): ${message}`);
     }
+    
     for (const result of actionResult.results) {
       console.log(`- Document ${result.id}`);
       if (result.error) {
@@ -54,15 +80,38 @@ async function ExtractTextExample(text) {
         throw new Error(`Unexpected error (${code}): ${message}`);
       }
 
-      return new Promise((resolve, reject) => resolve(result.sentences.map((sentence) => sentence.text).join("\n")));
+      return new Promise((resolve) => resolve(result.sentences.map((sentence) => sentence.text).join("\n")));
     }
   }
 }
 
-
-app.post('/', async(req, res) => {
+/**
+  * @swagger
+  * /summarize:
+  *   post:
+  *     tags:
+  *       - Summary
+  *     summary: Summarize the provided text snippet
+  *     description: Summarize the provided text snippet
+  *     requestBody:
+  *       description: The text to summarize.
+  *       content:
+  *         application/json:
+  *           schema:
+  *             $ref: '#/components/schemas/Book'
+  *     responses:
+  *       "200":
+  *         description: Successful operation
+  *         content:
+  *           application/json:
+  *             schema:
+  *         status: string
+  *         summary: string
+ */
+app.post('/summarize', async(req, res) => {
     var text = req.body.text;
-    await ExtractTextExample([text])
+    var sentenceCount = req.body.sentenceCount;
+    await ExtractText([text], sentenceCount)
           .then(result => {
             res.status(200);
                     var result = {
