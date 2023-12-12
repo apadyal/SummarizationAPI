@@ -44,9 +44,11 @@ The Azure Summarization service is a cloud-based solution that provides extracti
 
 ## Technology Stack
 Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. APIs. Hence, we are using Node JS and Express as a Web framework to implement the project. 
-Implementation Flow
+
+## Implementation Flow
  
-Figure 1 working of summarization AI
+![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851253951)
+
 We are implementing the API by using the HTTP POST method to get the input from a testing tool POSTMAN and present the prepared requested payload in a summarized sentence to the user. We have followed the steps to implement the Summarization API- <br />
 1.	The user will send a request using POSTMAN.<br />
 2.	The user’s request will be sent to our API.<br />
