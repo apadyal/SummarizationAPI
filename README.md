@@ -27,9 +27,6 @@ http://140.82.12.45:3000/docs/
 	        “text”: “< Your lengthy paragraph here >”, <br />
 	        “sentenceCount”: 3 <Number of sentence in the summary> <br />
 	     } 
-
-    
-   f. Hit 'SEND'. <br />
     
 API Operation Template to use- 
 Sr. No.	HTTP Method	Uniform API	Description	Example Payload
