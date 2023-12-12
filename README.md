@@ -58,25 +58,3 @@ We are implementing the API by using the HTTP POST method to get the input from 
 
 While implementing the above steps we have made sure that the user will need not to go and register or configure for the Azure Summarization API, the user can directly go and use/consume Our API to communicate with Azure Summarization.
 
-### Instructions to follow for using our API
-1.	Download Postman. Go to https://www.postman.com/downloads/ and choose your desired platform among Mac, Windows, or Linux. #   by using the link https://www.postman.com/downloads/ 
-a.	Open the downloaded file and click on run, it will start the Installation on your system
-b.	You can sign up or else it works without signing up. It is a free tool used for testing HTTP methods.
-c.	Now you have successfully installed Postman.
-2.	You will need to follow the below steps-
-API Operation Template to use- 
-Sr. No.	HTTP Method	Uniform API	Description	Example Payload
-1	POST	POST resource	POST method must be used to input the text to summarize it	POST:/api/translate
-{
-“text”: “string”,
-“sentenceCount”: “string”
-}
-
-Step 1 - Application API End points for POST( This REST endpoint is used to summarize the user provided input ‘text’ and provides the require information from the lengthy paragraphs, text in to optimized form.)
-
-Request URL: Send a POST request to
-
-
-3.	We have Swagger Documentation on the below link
-Link : https://140.82.12.45:3000/docs/#
-
