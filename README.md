@@ -19,7 +19,8 @@ http://140.82.12.45:3000/docs/
    d. For building the request body, click on 'raw' and select 'JSON' from the dropdown. <br />
        ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244271)
 
-   e. Enter the message into the request body. NOTE:  add newline charecter '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention. <br />
+   e. Enter the message into the request body. NOTE:  add newline character '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention. <br />
+      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244976)
   	The request JSON format is as follows - <br />
 
      { <br />
@@ -27,7 +28,7 @@ http://140.82.12.45:3000/docs/
         “sentenceCount”: 3 <Number of sentence in the summary> <br />
      } <br />
 
-    ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244976)
+    
    f. Hit 'SEND'. <br />
     
 API Operation Template to use- 
