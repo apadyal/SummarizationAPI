@@ -7,26 +7,26 @@ http://140.82.12.45:3000/docs/
   a.	Open the downloaded file and click on run, it will start the Installation on your system <br />
   b.	You can sign up or else it works without signing up. It is a free tool used for testing HTTP methods. <br />
   c.	Now you have successfully installed Postman. <br />
-2.	Create new request on Postman using following steps <br />
-   a. Open Postman and create 'New Request' <br />
-   b. Select POST from the request dropdown. <br />
-     ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851245410)
-
-  	
-   c. Enter the API URL in the address box <br />
-      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851243937)
-
-   d. For building the request body, click on 'raw' and select 'JSON' from the dropdown. <br />
-       ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244271)
-
-   e. Enter the message into the request body. NOTE:  add newline character '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention. <br />
-      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244976)
-  	The request JSON format is as follows - <br />
-
-     { <br />
-        “text”: “< Your lengthy paragraph here >”, <br />
-        “sentenceCount”: 3 <Number of sentence in the summary> <br />
-     } <br />
+2.	Create a new request on Postman using the following steps <br />
+	   a. Open Postman and create 'New Request' <br />
+	   b. Select POST from the request dropdown. <br />
+	     ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851245410)
+	
+	  	
+	   c. Enter the API URL in the address box <br />
+	      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851243937)
+	
+	   d. For building the request body, click on 'raw' and select 'JSON' from the dropdown. <br />
+	       ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244271)
+	
+	   e. Enter the message into the request body. NOTE:  add newline character '\n' If your paragraph has newlines for JSON parsing to successfully parse your message body as per JSON convention. <br />
+	      ![image](https://github.com/apadyal/SummarizationAPI/issues/1#issuecomment-1851244976)
+	  	The request JSON format is as follows - <br />
+	
+	     { <br />
+	        “text”: “< Your lengthy paragraph here >”, <br />
+	        “sentenceCount”: 3 <Number of sentence in the summary> <br />
+	     } <br />
 
     
    f. Hit 'SEND'. <br />
